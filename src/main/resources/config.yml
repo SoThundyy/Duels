@@ -1,0 +1,29 @@
+system:
+  spawn-player-one: "world;1;100;1;0;0"
+  spawn-player-two: "world;2;100;1;0;0"
+  spawn-waiting: "world;3;100;1;0;0"
+  min-players: 10
+  max-players: 40
+  bet-gui:
+    size: 36
+    player-one:
+      slot: 12
+      material: SKULL_ITEM
+      name: "&6&l%player%"
+      lore: "&7&o(( &f&oClicca per scommettere dei soldi! &7&o))"
+    player-two:
+      slot: 17
+      material: SKULL_ITEM
+      name: "&6&l%player%"
+      lore: "&7&o(( &f&oClicca per scommettere dei soldi! &7&o))"
+events:
+  event-one:
+    date: "2/01/2022 22:40"
+    can-bet: true
+    rewards:
+      - "say Hi!"
+  event-two:
+    date: "1/01/2022 22:40"
+    can-bet: true
+    rewards:
+      - "say Hi!"

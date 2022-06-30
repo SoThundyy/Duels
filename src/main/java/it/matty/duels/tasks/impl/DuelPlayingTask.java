@@ -34,6 +34,9 @@ public class DuelPlayingTask extends Task {
                 BukkitUtils.sendMessageToAll(plugin, Language.PLAYER_WINS_DUEL,
                         new Placeholder("player", winner.getName()));
                 break;
+            default:
+                duelManager.pickRandomFighters(duel);
+                break;
         }
     }
     

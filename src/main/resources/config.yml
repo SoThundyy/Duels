@@ -4,18 +4,15 @@ system:
   spawn-waiting: "world;3;100;1;0;0"
   min-players: 10
   max-players: 40
-  bet-gui:
-    size: 36
-    player-one:
-      slot: 12
-      material: SKULL_ITEM
-      name: "&6&l%player%"
-      lore: "&7&o(( &f&oClicca per scommettere dei soldi! &7&o))"
-    player-two:
-      slot: 17
-      material: SKULL_ITEM
-      name: "&6&l%player%"
-      lore: "&7&o(( &f&oClicca per scommettere dei soldi! &7&o))"
+language:
+  duel-help-message:
+    - "* /duel join — Join the current duel!"
+    - "* /duel left — Left the duel!"
+  duel-started:
+    - "A duel started!"
+    - "type /duel join to join the event!"
+  duel-already-started: "A duel is already started!"
+  joined-duel:
 events:
   event-one:
     date: "2/01/2022 22:40"

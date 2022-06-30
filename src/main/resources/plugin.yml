@@ -1,3 +1,10 @@
 name: Duels
 version: '${project.version}'
 main: it.matty.duels.DuelsPlugin
+commands:
+  duel:
+    aliases:
+      - duels
+  bet:
+    aliases:
+      - scommetti

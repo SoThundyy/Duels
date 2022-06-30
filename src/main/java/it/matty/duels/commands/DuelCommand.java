@@ -18,7 +18,6 @@ import org.bukkit.entity.Player;
 
 import java.util.List;
 
-@SuppressWarnings("NullableProblems")
 @RequiredArgsConstructor
 public class DuelCommand implements CommandExecutor, TabCompleter {
     private final DuelsPlugin plugin;
@@ -30,7 +29,7 @@ public class DuelCommand implements CommandExecutor, TabCompleter {
         
         Player player = (Player) sender;
         if (args.length == 0) {
-            Language.HELP_MESSAGE.send(plugin, player);
+            Language.DUEL_HELP_MESSAGE.send(plugin, player);
             return true;
         }
         
@@ -69,7 +68,7 @@ public class DuelCommand implements CommandExecutor, TabCompleter {
                         new Placeholder("player", player.getName()));
                 break;
             default:
-                Language.HELP_MESSAGE.send(plugin, player);
+                Language.DUEL_HELP_MESSAGE.send(plugin, player);
                 break;
         }
         

@@ -1,5 +1,7 @@
 package it.matty.duels;
 
+import it.matty.duels.commands.BetCommand;
+import it.matty.duels.commands.DuelCommand;
 import it.matty.duels.duel.manager.DuelManager;
 import it.matty.duels.tasks.Task;
 import it.matty.duels.tasks.impl.DuelCheckTask;
@@ -38,6 +40,11 @@ public final class DuelsPlugin extends JavaPlugin {
        duelManager = new DuelManager(this);
        duelManager.enable();
        economy = Objects.requireNonNull(getServer().getServicesManager().getRegistration(Economy.class)).getProvider();
+    }
+    
+    private void loadCommands() {
+        getCommand("duel").setExecutor(new DuelCommand(this, duelManager));
+        getCommand("bet").setExecutor(new BetCommand(this, duelManager));
     }
     
     private void loadTasks(Task... tasks) {

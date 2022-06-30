@@ -98,8 +98,8 @@ public class DuelManager implements Service {
                 duel.getPlayingPlayers().size() == ConfigSettings.MIN_PLAYERS.get(plugin, Integer.class);
     }
     
-    public List<UUID> pickRandomFighters(Duel duel) {
-        List<UUID> fighters = Lists.newArrayListWithCapacity(2);
+    public void pickRandomFighters(Duel duel) {
+        List<UUID> fighters = duel.getFighting();
         List<UUID> all = duel.getPlayingPlayers();
         
         for (int i = 0; i < 2; i++) {
@@ -110,8 +110,6 @@ public class DuelManager implements Service {
             fighters.add(uuid);
             all.removeAll(fighters);
         }
-        
-        return fighters;
     }
     
     public void greetBetters(Duel duel, UUID winner) {
